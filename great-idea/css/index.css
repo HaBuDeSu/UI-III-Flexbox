@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -64,3 +64,180 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+header {
+	width: 100%;
+	height: 60px;
+	margin: 0 auto;
+	background: #ccccff;
+	position: fixed;
+	top: 0px;
+}
+
+.navbar {
+	width: 1200px;
+	height: 50px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header nav {
+	width: 75%;
+	display: flex;
+	justify-content: space-between;
+}
+
+header nav a {
+	font-size: 20px;
+	color: gray;
+	text-decoration: none;
+}
+
+header nav a:hover {
+	color: white;
+}
+
+header img {
+	width: 200px;
+}
+
+.hero {
+		width: 100%;
+		height: 600px;
+		margin-top: 60px;
+		font-size: 0;
+		display: flex;
+}
+
+.hero-left {
+		width: 600px;
+		height: 600px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+}
+
+@keyframes blues {
+	0% {color: #000000;}
+	25% {color: #ccccff;}
+	50% {color: red;}
+	75% {color: #ccccff;}
+	100% {color: #000000;}
+}
+
+h1 {
+	font-size: 80px;
+	text-align: center;
+	animation-name: blues;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+button {
+	width: 160px;
+	height: 30px;
+	font-size: 16px;
+	background: white;
+	border-color: black;
+}
+
+button:hover {
+	background: #ccccff;
+}
+
+.hero-right {
+		width: 600px;
+		height: 600px;
+}
+
+@keyframes pulse {
+	0% {height: 100%; width: 100%;}
+	50% {height: 80%; width: 80%; padding-left: 20%; padding-top: 20%;}
+	100% {height: 100%; width: 100%;}
+}
+
+.hero-right img {
+	height: 100%;
+	width: 100%;
+	padding: 10%;
+}
+
+.hero-right img:hover {
+	animation-name: pulse;
+	animation-duration: 2s;
+	animation-iteration-count: 2;
+}
+
+.twocolumns {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.features {
+	width: 600px;
+	font-size: 16px;
+	padding: 20px 0;
+}
+
+.about {
+	width: 600px;
+	font-size: 16px;
+	padding: 20px 0;
+}
+
+.middle-img {
+	width: 100%;
+}
+
+.threecolumns {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.services {
+	width: 400px;
+	font-size: 16px;
+	padding: 20px 0;
+	margin-right: 10px;
+}
+
+.product {
+	width: 400px;
+	font-size: 16px;
+	padding: 20px 0;
+	margin-right: 10px;
+}
+
+.vision {
+	width: 400px;
+	font-size: 16px;
+	padding: 20px 0;
+	margin-right: 10px;
+}
+
+.contact {
+	font-size: 16px;
+	margin-top: 40px;
+}
+
+.contact p {
+	margin-bottom: 10px;
+}
+
+footer {
+	font-size: 16px;
+	text-align: center;
+	margin-top: 60px;
+	margin-bottom: 100px;
+	font-family: Srisakdi, cursive;
+}
